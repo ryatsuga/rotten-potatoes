@@ -1,13 +1,11 @@
-# rotten-potatoes
+# Rotten-Potatoes Kubernetes
 
-## Configuração
+A Kubernetes orchestration with Flask and MongoDB
 
-MONGODB_DB => Nome do database
+## Getting Started
 
-MONGODB_HOST => Host do MongoDB
-
-MONGODB_PORT => Posta de acesso ao MongoDB
-
-MONGODB_USERNAME => Usuário do MongoDB
-
-MONGODB_PASSWORD => Senha do MongoDB
+1. Criar um cluster:
+   - Com o k3d: k3d cluster create --agents 3 --servers 3 -p "8080:30000@loadbalancer"
+2. Acessar diretório "k3s" pelo prompt de comando;
+3. Rodar o comando "kubectl apply -f deployment.yaml" e aguardar criação dos elementos (pods, replicasets, services...);
+4. Acessar o web app rodando localmente em: localhost:8080
